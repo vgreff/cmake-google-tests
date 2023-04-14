@@ -14,11 +14,6 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 
-add_library(${SampleName} ${SampleName}.cc)
-
-target_include_directories(${SampleName} PUBLIC include)
-
-
 enable_testing()
 
 include(FetchContent)
@@ -38,6 +33,6 @@ add_executable(${SampleName}_test ${SampleName}_unittest.cc)
 target_link_libraries(${SampleName}_test
  PRIVATE
   GTest::GTest
-  ${SampleName})
+ )
 
 add_test(${SampleName}_gtests ${SampleName}_test)
