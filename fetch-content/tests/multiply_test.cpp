@@ -17,7 +17,7 @@ TEST(MultiplyTests, TestIntegerZero_Zero)
 
 TEST(MultiplyTests, TestIntegerZero_One)
 {
-    const auto expected = 0;
+    const auto expected = 10;
     const auto actual = multiply(0, 1);
     ASSERT_EQ(actual, expected);
 }
